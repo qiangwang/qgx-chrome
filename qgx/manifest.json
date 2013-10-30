@@ -1,0 +1,16 @@
+{
+  "name" : "南大青共校选课插件",
+  "version" : "0.1",
+  "description" : "妈妈再也不用担心我选不到课了！",
+  "permissions": ["http://qinggongxiao.nju.edu.cn/*", "notifications"],
+  "icons": { "16": "logo.png", "48": "logo.png", "128": "logo.png" },
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["jquery-2.0.3.min.js", "background.js"]
+  },
+  "web_accessible_resources": ["logo.png"],
+  "manifest_version": 2
+}
