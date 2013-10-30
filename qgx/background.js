@@ -33,7 +33,10 @@ var checkSelect = function(){
                             type: 'post',
                             data: {lid: lid},
                             success: function(data){
-                                ids.push(id)
+                                if(data == '您已成功选修！请勿重复点选。'){
+                                    ids.push(id)
+                                    return
+                                }
                                 var message = '[' + data + ']' + $font.text() + $a.text() 
                                 webkitNotifications.createNotification('logo.png', '选中一门课！', message).show()
                                 console.log(message)
